@@ -2,8 +2,8 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    color: #333;
-    background: white;
+    color: black;
+    background: whitesmoke;
 }
 
 /* Main Container */
@@ -23,12 +23,15 @@ body {
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #2c3e50;
-}
+    /* Keep any necessary positioning/spacing */
+    height: 40px; /* Adjust based on your logo height */
+  }
+  
+  .logo-image {
+    height: 82px; /* Makes image fill container height */
+    width: 135px; /* Maintains aspect ratio */
+    display: block; /* Removes extra space under image */
+  }
 
 /* Navigation Styles */
 .navbar ul {
@@ -41,7 +44,6 @@ body {
 
 .navbar a {
     text-decoration: none;
-    color: #333;
     font-weight: 500;
 }
 
@@ -50,6 +52,12 @@ body {
     font-weight: bold;
 }
 
+.cart-icon {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+  }
+  
 /* Header Content Section */
 .header-content {
     display: flex;
@@ -57,7 +65,7 @@ body {
     align-items: flex-end;
     /* Align items to bottom */
     width: 100%;
-    margin: 0 auto;
+    margin: 121px auto;
 }
 
 .text-content {
@@ -70,15 +78,22 @@ body {
     font-size: 65px;
     line-height: 1.2;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: black;
     font-weight: bold;
 }
 
-.text-content p {
-    font-size: 16px;
-    line-height: 1.6;
+.orange {
+    color: #E95A08;
+}
+
+.secondary-color {
     color: #7f8c8d;
-    max-width: 500px;
+}
+
+.text-content p {
+    font-size: 22px;
+    line-height: 1.2;
+    max-width: 570px;
 }
 
 .image-container {
