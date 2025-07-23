@@ -24,14 +24,18 @@ body {
 
 .logo {
     /* Keep any necessary positioning/spacing */
-    height: 40px; /* Adjust based on your logo height */
-  }
-  
-  .logo-image {
-    height: 82px; /* Makes image fill container height */
-    width: 135px; /* Maintains aspect ratio */
-    display: block; /* Removes extra space under image */
-  }
+    height: 40px;
+    /* Adjust based on your logo height */
+}
+
+.logo-image {
+    height: 82px;
+    /* Makes image fill container height */
+    width: 135px;
+    /* Maintains aspect ratio */
+    display: block;
+    /* Removes extra space under image */
+}
 
 /* Navigation Styles */
 .navbar ul {
@@ -56,8 +60,8 @@ body {
     width: 18px;
     height: 18px;
     vertical-align: middle;
-  }
-  
+}
+
 /* Header Content Section */
 .header-content {
     display: flex;
@@ -111,4 +115,57 @@ body {
 .header-content>* {
     margin: 0;
     padding: 0;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 430px) {
+
+    /* iPhone 14/15 Pro width */
+    .header-content {
+        flex-direction: column;
+    }
+
+    .image-container {
+        order: -1;
+        /* Moves image to top */
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .navbar ul li:not(.cart) {
+        display: none;
+        /* Hides all nav items except cart */
+    }
+
+    .cart {
+        margin-left: auto;
+        width: 113px;
+        height: 24px;
+        /* Pushes cart to right */
+    }
+
+    .header-top {
+        padding: 15px 0;
+        display: flex;
+        align-items: center;
+        /* Vertically center logo and cart */
+    }
+
+    .text-content {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .text-content h1 {
+        font-size: 28px;
+    }
+
+    /* New logo size adjustment to match cart */
+    .logo img {
+        height: 38px;
+        /* Matches typical cart icon size */
+        width: 64px;
+        /* Maintains aspect ratio */
+    }
 }
