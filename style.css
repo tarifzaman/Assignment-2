@@ -117,9 +117,89 @@ body {
     padding: 0;
 }
 
+/* main  sections* /
+/* Main content styles */
+/* Plant Section Styles */
+.plant-section {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 30px 150px 0;
+    text-align: center;
+}
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    color: #7f8c8d;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Plant Grid Layout */
+.plant-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+.plant-card {
+    width: 100%;
+    max-width: 270px;
+    height: 485px;
+    background: white;
+    overflow: hidden;
+}
+
+.card-image {
+    height: 333px;
+    width: 270px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.plant-card h3 {
+    margin: 15px 0 5px;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.cart-button {
+    width: 270px;
+    height: 50px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    background: #E95A08;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 /* responsive */
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 394px) {
 
     /* iPhone 14/15 Pro width */
     .header-content {
@@ -168,4 +248,55 @@ body {
         width: 64px;
         /* Maintains aspect ratio */
     }
+
+    .plant-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns */
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .plant-card {
+        max-width: 100%;
+        height: 340px;
+        width: 171px;
+        aspect-ratio: 270/485;
+        display: flex;
+        /* Add this */
+        flex-direction: column;
+        /* Add this */
+    }
+
+    .card-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 270/333;
+    }
+
+    .cart-button {
+        width: 100%;
+        max-width: 270px;
+        margin-top: auto;
+        /* Pushes button to bottom */
+        margin-left: auto;
+        /* Centers button */
+        margin-right: auto;
+        margin-bottom: 15px;
+        /* Reduced from 20px */
+    }
+
+    /* Text adjustments for mobile */
+    .plant-card h3 {
+        font-size: 18px;
+        /* Slightly smaller */
+        margin: 10px 0 5px;
+        /* Tighter spacing */
+    }
+
+    .price {
+        font-size: 18px;
+        /* Slightly smaller */
+    }
+
+
 }
