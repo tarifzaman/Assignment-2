@@ -67,19 +67,68 @@ body {
 }
 
 /* Header Content Section */
+/* Main Header Styles */
+.main-header {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 30px 150px 0;
+}
+
+/* Header Top Section (Logo + Nav) */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.logo-image {
+    height: 82px;
+    width: 135px;
+    display: block;
+}
+
+/* Navigation Styles */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cart a {
+    color: black;
+    font-weight: bold;
+}
+
+.cart-icon {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+/* Header Content Section (Text + Image) */
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    /* Align items to bottom */
+    /* Aligns items to the bottom */
     width: 100%;
-    margin: 121px auto;
+    margin: 121px auto 0;
+    /* Removed bottom margin for tighter alignment */
 }
 
 .text-content {
     width: 570px;
-    padding-bottom: 20px;
-    /* Adjust as needed */
+    padding-bottom: 0;
+    /* Critical: Removes extra spacing */
 }
 
 .text-content h1 {
@@ -101,25 +150,26 @@ body {
 .text-content p {
     font-size: 22px;
     line-height: 1.6;
-    max-width: 888px;
-    height: 54px;
+    max-width: 570px;
+    /* Matches container width */
+    margin-bottom: 0;
+    /* Removes default paragraph margin */
 }
 
 .image-container {
     width: 570px;
     height: 355px;
+    display: flex;
+    align-items: flex-end;
+    /* Ensures image sticks to the bottom */
 }
 
 .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-/* Remove all gaps between flex items */
-.header-content>* {
     margin: 0;
-    padding: 0;
+    /* Removes any default image margins */
 }
 
 /* main  sections* /
@@ -406,6 +456,51 @@ body {
     cursor: pointer;
 }
 
+/* Email section  */
+  .email-section {
+    height: 540px;
+    background-image: url('images/news-letter-bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .email-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  
+  .email-form {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .email-input {
+    width: 644px;
+    height: 50px;
+    padding: 18px 25px;
+    width: 500px;
+    border: 2px solid #fff;
+    font-size: 18px;
+    background-color: white;
+  }
+  
+  .subscribe-btn {
+    padding: 18px 35px;
+    width: 186px;
+    height: 50px;
+    background-color: #E95A08;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
 /* responsive */
 
 @media only screen and (max-width: 430px) {
@@ -680,4 +775,27 @@ body {
         font-size: 20px;
     }
 
+    /* email section  */
+    .email-form {
+        flex-direction: row;
+        justify-content: center;
+      }
+    
+      .email-input {
+        width: 218px;
+        height: 50px;
+        padding: 10px 15px;
+        font-size: 16px;
+      }
+    
+      .subscribe-btn {
+        width: 103px;
+        height: 50px;
+        font-size: 16px;
+        padding: 0;
+      }
+    
+      .email-container {
+        padding: 0 36px;
+      }
 }
