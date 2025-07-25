@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 /* Base Styles */
 body {
     margin: 0;
@@ -96,8 +100,9 @@ body {
 
 .text-content p {
     font-size: 22px;
-    line-height: 1.2;
-    max-width: 570px;
+    line-height: 1.6;
+    max-width: 888px;
+    height: 54px;
 }
 
 .image-container {
@@ -141,8 +146,9 @@ body {
 .section-description {
     color: #7f8c8d;
     line-height: 1.6;
-    max-width: 700px;
+    max-width: 888px;
     margin: 0 auto;
+    font-size: 22px;
 }
 
 /* Plant Grid Layout */
@@ -157,7 +163,6 @@ body {
     width: 100%;
     max-width: 270px;
     height: 485px;
-    background: white;
     overflow: hidden;
 }
 
@@ -196,6 +201,89 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+
+/* feature container  */
+/* Feature Section Styles */
+
+
+.feature-section {
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-container {
+    display: flex;
+    width: 1140px;
+    margin: 170px 0 0 0;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.feature-image {
+    width: 540px;
+    flex-shrink: 0;
+    position: relative;
+    /* Required for absolute positioning */
+}
+
+.feature-img {
+    width: 100%;
+    /* Now it respects the container size */
+    height: 600px;
+    object-fit: cover;
+    display: block;
+}
+
+.feature-content {
+    width: 540px;
+    flex-shrink: 0;
+    height: auto;
+    /* Allow it to grow with content */
+}
+
+.feature-content h1 {
+    margin-top: 0;
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    max-width: 540px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.feature-list li:before {
+    content: "•";
+    color: #7f8c8d;
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* This controls the size and position of the badge */
+.badge-img {
+    width: 286px;
+    height: 286px;
+    position: absolute;
+    top: -135px;
+    left: 342px;
+    border-radius: 20px;
+    z-index: 1;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+}
+
 
 /* responsive */
 
